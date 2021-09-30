@@ -1,0 +1,78 @@
+ar readlinesync = require("readline-sync");
+var score =0;
+var username = readlinesync.question("whats your name?");
+
+console.log("welcome"+ username+ " do you know Rajashekar ks?");
+
+
+
+function play(question, answer) {
+  var useranswer = readlinesync.question(question);
+
+  if (useranswer===answer)  {
+
+    console.log("right");
+    score = score +1;
+
+  }else{
+    console.log("wrong!")
+    
+  }
+   
+    console.log("current score:",score);
+    console.log("------------")
+
+}
+
+
+
+
+
+var questions = [{
+   question:"where do i live?",
+  answer: "anantapur"
+} , {
+    
+    question:"who is my favorite philosopher?",
+  answer:"ayn rand"
+}, {
+
+  question:"which is my fav book and why?",
+  answer:"thus spoke zarathustra because i luv fiction stories"
+
+}, {
+    
+   question: "which is my favorite movie?";
+   answer: "intersteller"
+
+
+   question :"who is my best friend?"
+   answer:"nithin reddy"
+
+} 
+];
+
+
+
+for (var i=0; i<questions.length; i++)  {
+
+  var currentquestion = questions[i];
+  play(currentquestion.question, currentquestion.answer)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
